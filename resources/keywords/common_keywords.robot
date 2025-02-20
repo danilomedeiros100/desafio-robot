@@ -6,9 +6,28 @@ Library     Collections
 *** Keywords ***
 Click And Wait
     [Arguments]    ${locator}
-    Wait Until Element Is Visible    ${locator}    timeout=5s
+    Wait Until Element Is Visible    ${locator}    timeout=10s
+    Click Element    ${locator}
+
+Wait For Element And Click
+    [Arguments]    ${locator}
+    Wait Until Element Is Visible    ${locator}    timeout=10s
     Wait Until Element Is Enabled    ${locator}    timeout=5s
     Click Element    ${locator}
+
+Input Text And Wait
+    [Arguments]    ${locator}    ${text}
+    Wait Until Element Is Visible    ${locator}    timeout=10s
+    Wait Until Element Is Enabled    ${locator}    timeout=5s
+    Click Element    ${locator}
+    Clear Element Text    ${locator}
+    Input Text    ${locator}    ${text}
+
+Validate Text
+    [Arguments]    ${locator}    ${expected_text}
+    Wait Until Element Is Visible    ${locator}    timeout=10s
+    ${actual_text}=    Get Text    ${locator}
+    Should Be Equal As Strings    ${actual_text}    ${expected_text}
 
 Imprimir Separador
     Log To Console    "\n==============================================="
