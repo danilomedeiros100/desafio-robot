@@ -191,3 +191,7 @@ allure-results/
 # Arquivos temporários de execução
 *.log
 *.tmp
+
+# Ignorar arquivos do macOS e IDEs
+.DS_Store
+.idea/
