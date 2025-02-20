@@ -1,0 +1,5 @@
+--listener allure_robotframework
+-d reports
+--log reports/log.html
+--report reports/report.html
+--output reports/output.xml

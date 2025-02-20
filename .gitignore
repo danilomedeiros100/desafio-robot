@@ -169,3 +169,25 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Robot Framework logs e relatórios
+reports/output/
+reports/allure-results/
+reports/allure-report/
+log.html
+report.html
+output.xml
+
+# Allure Report
+allure-report/
+allure-results/
+
+
+# Arquivos temporários do Robot Framework
+*.robotcache/
+
+
+# Arquivos temporários de execução
+*.log
+*.tmp

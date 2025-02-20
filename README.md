@@ -61,14 +61,19 @@ pip install -r requirements.txt
 ### 3.4. Executando os Testes
 Os testes podem ser executados diretamente pelo Robot Framework:
 
+#### Rodar todos os testes
+```sh
+robot -A argumentfile.txt tests/
+```
+
 #### Testes Backend (API ViaCEP)
 ```sh
-robot -d results tests/backend.robot
+robot -A argumentfile.txt tests/backend.robot
 ```
 
 #### Testes Frontend (KaBuM)
 ```sh
-robot -d results tests/frontend.robot
+robot -A argumentfile.txt tests/frontend.robot
 ```
 
 Os resultados dos testes serão gerados na pasta **results/**.
@@ -116,6 +121,12 @@ Os testes verificam a API **ViaCEP** para garantir a correta manipulação de CE
 ---
 
 ## 5. Relatórios e Logs
+### Para visualizar os relatórios:
+
+```sh
+allure serve output/allure 
+```
+
 Os logs de execução são gerados automaticamente na pasta **results/**, incluindo:
 - **Output.xml**: Log detalhado da execução.
 - **Log.html**: Registro interativo de cada etapa dos testes.
