@@ -4,9 +4,10 @@ Library     BuiltIn
 Library     Collections
 
 *** Keywords ***
-Esperar e Clicar
+Click And Wait
     [Arguments]    ${locator}
-    Wait Until Element Is Visible    ${locator}    10s
+    Wait Until Element Is Visible    ${locator}    timeout=5s
+    Wait Until Element Is Enabled    ${locator}    timeout=5s
     Click Element    ${locator}
 
 Imprimir Separador

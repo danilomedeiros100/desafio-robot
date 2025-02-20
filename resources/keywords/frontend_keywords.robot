@@ -30,20 +30,20 @@ Digitar CEP e Validar Frete
     Click Element    id=inputCalcularFrete
     Clear Element Text    id=inputCalcularFrete
     Input Text    id=inputCalcularFrete    ${cep}
-    Esperar e Clicar    id=botaoCalcularFrete
+    Click And Wait   id=botaoCalcularFrete
     Wait Until Element Is Visible    id=listaOpcoesFrete    15s
 
 Fechar Tela de Frete
-    Esperar e Clicar    xpath=//div[@role='dialog']//button[@aria-label='Fechar']
+    Click And Wait   xpath=//div[@role='dialog']//button[@aria-label='Fechar']
 
 Clicar em Comprar
-    Esperar e Clicar    xpath=//button[contains(text(),'COMPRAR')]
+    Click And Wait    xpath=//button[contains(text(),'COMPRAR')]
 
 Selecionar Garantia Estendida
-    Esperar e Clicar    xpath=//span[contains(text(),'12 Meses de garantia')]/parent::div/parent::div/preceding-sibling::input
+    Click And Wait    xpath=//span[contains(text(),'12 Meses de garantia')]/parent::div/parent::div/preceding-sibling::input
 
 Ir para o Carrinho
-    Esperar e Clicar    xpath=//button[span[contains(text(),'Adicionar serviços')]]
+    Click And Wait    xpath=//button[span[contains(text(),'Adicionar serviços')]]
 
 Capturar Dados do Produto
     Wait Until Element Is Visible    xpath=//div[contains(@class, 'col-purchase')]//h1    10s
